@@ -1,3 +1,0 @@
-![Build Status](https://codeship.com/projects/247cce80-e26e-0133-9815-5e7bb9818a79/status?branch=master)
-![Code Climate](https://codeclimate.com/github/kamilleski/Campus-Verus.png)
-![Coverage Status](https://coveralls.io/repos/kamilleski/Campus-Verus/badge.png)
