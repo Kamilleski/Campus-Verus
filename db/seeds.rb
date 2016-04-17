@@ -1,4 +1,5 @@
-School.create(name: "University of California, Berkeley",
+School.create(
+  name: "University of California, Berkeley",
   nickname: "Berkeley",
   city: "Berkeley",
   state: "CA",
@@ -11,7 +12,8 @@ School.create(name: "University of California, Berkeley",
   mascot: "Oski the Bear",
   date_founded: 1868)
 
-School.create(name: "California State University, Chico",
+School.create(
+  name: "California State University, Chico",
   nickname: "Chico State",
   city: "Chico",
   state: "CA",
@@ -24,7 +26,8 @@ School.create(name: "California State University, Chico",
   mascot: "Wildcat",
   date_founded: 1887)
 
-School.create(name: "Harvard University",
+School.create(
+  name: "Harvard University",
   nickname: "Harvard",
   city: "Cambridge",
   state: "MA",
@@ -37,7 +40,8 @@ School.create(name: "Harvard University",
   mascot: "John Harvard, the Pilgrim",
   date_founded: 1636)
 
-School.create(name: "Leland Stanford Junior University",
+School.create(
+  name: "Leland Stanford Junior University",
   nickname: "Stanford",
   city: "Stanford",
   state: "CA",
