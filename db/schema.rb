@@ -11,9 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160417122555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "schools", force: :cascade do |t|
+    t.string   "name",                 null: false
+    t.string   "nickname",             null: false
+    t.string   "city",                 null: false
+    t.string   "state",                null: false
+    t.string   "motto",                null: false
+    t.string   "email_domain",         null: false
+    t.integer  "undergrad_population", null: false
+    t.integer  "graduate_population",  null: false
+    t.boolean  "public",               null: false
+    t.string   "logo",                 null: false
+    t.string   "mascot",               null: false
+    t.integer  "date_founded",         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
