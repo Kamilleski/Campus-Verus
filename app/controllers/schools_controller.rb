@@ -15,9 +15,4 @@ class SchoolsController < ApplicationController
   def show
     @school = School.find(params[:id])
   end
-
-  def max_number_index_pages(pages_per)
-    num_schools = School.all.length
-    return (num_schools / pages_per).ceil
-  end
 end
