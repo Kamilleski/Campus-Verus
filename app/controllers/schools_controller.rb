@@ -5,11 +5,6 @@ class SchoolsController < ApplicationController
     else
       @schools = School.all.order(:name).page params[:page]
     end
-
-    def max_number_index_pages(pages_per)
-      num_schools = School.all.length
-      return (num_schools / pages_per).ceil
-    end
   end
 
   def show
