@@ -1,0 +1,36 @@
+<h1><%= @school.name %></h1>
+<br />
+<table>
+  <tr>
+    <td><b>Website</b></td>
+    <td><a href="http://www.<%= @school.email_domain %>"</a> <%= @school.nickname %> homepage</td>
+  </tr>
+  <tr>
+    <td><b>Location</b></td>
+    <td><%= @school.city %>, <%= @school.state %></td>
+  </tr>
+  <tr>
+    <td><b>Motto</b></td>
+    <td><%= @school.motto %></td>
+  </tr>
+  <tr>
+    <td><b>Undergraduates</b></td>
+    <td><%= @school.undergrad_population %></td>
+  </tr>
+  <tr>
+    <td><b>Graduates</b></td>
+    <td><%= @school.graduate_population %></td>
+  </tr>
+  <tr>
+    <td><b>Public?</b></td>
+    <td><%= @school.public %></td>
+  </tr>
+  <tr>
+    <td><b>Mascot</b></td>
+    <td><%= @school.mascot %></td>
+  </tr>
+  <tr>
+    <td><b>Date Founded</b></td>
+    <td><%= @school.date_founded %></td>
+  </tr>
+</table>
