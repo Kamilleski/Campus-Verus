@@ -17,10 +17,12 @@ class School < ActiveRecord::Base
   validates :email_domain, presence: true
   validates :undergrad_population, numericality: true
   validates :graduate_population, numericality: true
-  validates :public, presence: true
+  validates_inclusion_of :public, in: [true, false]
   validates :logo, presence: true
   validates :mascot, presence: true
   validates :date_founded, numericality: true
+
+  paginates_per 5
 
   def self.search(query)
     where("name ilike ?", "%#{query}%")

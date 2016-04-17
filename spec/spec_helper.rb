@@ -1,6 +1,7 @@
 require 'coveralls'
 Coveralls.wear!('rails')
 require 'database_cleaner'
+require 'factory_girl'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
