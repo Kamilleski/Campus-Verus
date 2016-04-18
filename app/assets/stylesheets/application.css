@@ -19,6 +19,22 @@
 .centered { vertical-align:middle; text-align:center; }
 .sticky { width: 100%; }
 
+.parallax-window {
+    min-height: 800px;
+    background: transparent;
+}
+
+.parallax-slider {
+    min-height: 800px;
+    background: rgb(202,202,202);
+}
+
+html { height: 100%; }
+
+.parallax-mirror {
+    z-index:1
+}
+
 div.pagination {
   float: center
 }
