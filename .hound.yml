@@ -1,6 +1,8 @@
 AllCops:
   Exclude:
     - db/schema.rb
+    - app/assets/javascripts/parallax.js
+    - app/assets/javascripts/parallax.min.js
   #DisplayCopNames: true
 
 AccessorMethodName:
