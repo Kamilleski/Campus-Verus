@@ -4,7 +4,7 @@ feature "user can see a list of colleges with links to their show pages" do
   let!(:berkeley) { FactoryGirl.create(:school) }
 
   scenario "user is not signed in" do
-    visit root_path
+    visit schools_path
 
     expect(page).to have_content("Schools available for tours:")
     expect(page).to have_content("Select school to view details and available guides.")
@@ -12,7 +12,7 @@ feature "user can see a list of colleges with links to their show pages" do
   end
 
   scenario "user is not signed in an cannot view show page" do
-    visit root_path
+    visit schools_path
 
     click_link berkeley.name
 
