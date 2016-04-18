@@ -432,6 +432,104 @@ School.create(
   mascot: "Testudo",
   date_founded: 1856)
 
+School.create(
+  name: "Carleton College",
+  nickname: "Carleton",
+  city: "Northfield",
+  state: "MN",
+  motto: "Declaratio Sermonum Tuorum Illuminat",
+  email_domain: "carleton.edu",
+  undergrad_population: 2014,
+  graduate_population: 0,
+  public: false,
+  logo: "https://upload.wikimedia.org/wikipedia/en/6/6d/Carletoncollegeseal.png",
+  mascot: "Knight",
+  date_founded: 1866)
+
+School.create(
+  name: "Harvey Mudd College",
+  nickname: "HMC",
+  city: "Claremont",
+  state: "CA",
+  motto: "none",
+  email_domain: "hmc.edu",
+  undergrad_population: 807,
+  graduate_population: 0,
+  public: false,
+  logo: "https://upload.wikimedia.org/wikipedia/en/6/65/Hmc_seal.svg",
+  mascot: "Stag",
+  date_founded: 1955)
+
+School.create(
+  name: "Washington and Lee University",
+  nickname: "Washington and Lee",
+  city: "Lexington",
+  state: "VA",
+  motto: "Nōn Incautus Futūrī",
+  email_domain: "wlu.edu",
+  undergrad_population: 1890,
+  graduate_population: 374,
+  public: false,
+  logo: "https://upload.wikimedia.org/wikipedia/en/f/f0/W%26L_Crest.png",
+  mascot: "General",
+  date_founded: 1749)
+
+School.create(
+  name: "Deep Springs College",
+  nickname: "Deep Springs",
+  city: "Deep Springs",
+  state: "CA",
+  motto: "Academics, Labor and Self-Governance",
+  email_domain: "deepsprings.edu",
+  undergrad_population: 26,
+  graduate_population: 0,
+  public: false,
+  logo: "http://www.deepsprings.edu/wp-content/themes/deepsprings/images/dsc-logo-print.gif",
+  mascot: "none",
+  date_founded: 1917)
+
+# School.create(
+#   name: "",
+#   nickname: "",
+#   city: "",
+#   state: "",
+#   motto: "",
+#   email_domain: "",
+#   undergrad_population: XX,
+#   graduate_population: XX,
+#   public: bool,
+#   logo: "",
+#   mascot: "",
+#   date_founded: XX)
+
+# School.create(
+#   name: "",
+#   nickname: "",
+#   city: "",
+#   state: "",
+#   motto: "",
+#   email_domain: "",
+#   undergrad_population: XX,
+#   graduate_population: XX,
+#   public: bool,
+#   logo: "",
+#   mascot: "",
+#   date_founded: XX)
+
+# School.create(
+#   name: "",
+#   nickname: "",
+#   city: "",
+#   state: "",
+#   motto: "",
+#   email_domain: "",
+#   undergrad_population: XX,
+#   graduate_population: XX,
+#   public: bool,
+#   logo: "",
+#   mascot: "",
+#   date_founded: XX)
+
 # School.create(
 #   name: "",
 #   nickname: "",

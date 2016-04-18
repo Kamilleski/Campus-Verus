@@ -19,6 +19,48 @@
 .centered { vertical-align:middle; text-align:center; }
 .sticky { width: 100%; }
 
+.parallax-window {
+    min-height: 800px;
+    background: transparent;
+}
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+h2, h3, h4, tr {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+tr, a {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  color: #1e3d7b;
+  font-size: 24px;
+}
+
+img.avatar-icon {
+    width: 90%;
+		max-width: 300px;
+		border: 10px solid;
+		border-color: #1e3d7b;
+		border-radius: 180px;
+    float: center;
+    margin: auto;
+}
+
+.parallax-slider {
+    min-height: 800px;
+    background: rgb(202,202,202);
+}
+
+html { height: 100%; }
+
+.parallax-mirror {
+    z-index:1
+}
+
 div.pagination {
   float: center
 }
@@ -37,6 +79,11 @@ nav.pagination span {
 
 .first, .last, .next, .prev {
   width: 7%
+}
+
+.standard-background {
+  background: url("http://bit.ly/1WBsu0S") center;
+	background-size: cover;
 }
 /* Medium-Up Navigation */
 @media only screen and (min-width: 40rem) {
