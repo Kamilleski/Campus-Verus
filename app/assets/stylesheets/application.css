@@ -15,3 +15,26 @@
  *= require foundation_and_overrides
 
  */
+
+.centered { vertical-align:middle; text-align:center; }
+.sticky { width: 100%; }
+
+div.pagination {
+  float: center
+}
+
+nav.pagination span {
+  float: left;
+}
+
+.pagination, .current {
+  display: inline;
+  padding-right: 2px;
+  padding-left: 2px;
+  text-align: center;
+  width: 5%;
+}
+
+.first, .last, .next, .prev {
+  width: 7%
+}

@@ -3,7 +3,7 @@
 <h3>Select school to view details and available guides.</h3>
 <br />
 <div>
-  <table>
+  <table style="width:90%">
     <tr>
       <th>School Logo</th>
       <th>Name</th>
@@ -11,8 +11,8 @@
     </tr>
     <% @schools.each do |school| %>
       <tr>
-        <td><a href="/schools/<%= school.id %>">
-          <img src="<%= school.logo %>" style="max-height:125px">
+        <td class="centered" style="max-width:150"><a href="/schools/<%= school.id %>">
+          <img src="<%= school.logo %>" style="max-height:112px">
         </a></td>
         <td><%= link_to school.name, school_path(school) %></td>
         <td><%= school.city %>, <%= school.state %></td>
@@ -20,5 +20,7 @@
     <% end %>
   </table>
   <br />
-  <%= paginate @schools %>
+  <div class="pagination">
+    <%= paginate @schools %>
+  </div>
 </div>
