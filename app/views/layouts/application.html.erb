@@ -32,7 +32,7 @@
 
           <div class="logo-wrapper hide-for-small-only">
             <div class="logo">
-              <img src="http://placehold.it/350x150?text=LOGO">
+              <a href="/"><img src="http://placehold.it/350x150?text=LOGO"></a>
             </div>
           </div>
 
@@ -55,7 +55,7 @@
                     <%= text_field_tag :search, params[:search], placeholder: "Search Schools" %>
                   </li>
                   <li>
-                    <%= submit_tag "Search", :name => nil, style: "background-color:white" %>
+                    <%= submit_tag "Search", :name => nil, class: "button" %>
                   </li>
                 </ul>
                 <% end %>
