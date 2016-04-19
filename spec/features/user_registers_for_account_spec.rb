@@ -61,6 +61,7 @@ feature 'user can register for an account as either a student or a tourist' do
     select freddie.year_in_college, from: "student_year_in_college"
     fill_in "student_living_situation", with: freddie.living_situation
     fill_in "student_hometown", with: freddie.hometown
+    fill_in "student_major", wigh: freddie.major
     fill_in "student_password", with: freddie.password
     fill_in "student_password_confirmation", with: freddie.password
 

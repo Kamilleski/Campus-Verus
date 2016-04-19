@@ -37,15 +37,39 @@
     </tr>
   </table>
   <br />
-  <br />
+  <div class="sign-in small-8 large-centered columns">
+    <br /><br />
+      <h2 align="center"><b><%= @school.nickname %> Student Tour Guides</b></h2>
+    <br /><br />
+  </div>
+  <br /><br />
   <% if !current_student && !current_tourist %>
-    <div class="sign-in small-9 large-centered columns">
-      <br />
-      <h3 align="center">High school student? <%= link_to "Log In", new_tourist_session_path %> or <%= link_to "Sign Up", new_tourist_registration_path %> to view available guides at <%= @school.nickname %></h3>
-      <h3 align="center">College student? <%= link_to "Log In", new_student_session_path %> or <%= link_to "Sign Up", new_student_registration_path %> to view available guides at <%= @school.nickname %></h3>
-      <br />
-    </div>
+    <%= render 'students/unauthorized' %>
+  <% else %>
+    <% @students.each do |student| %>
+    <a href="/students/<%= student.id %>">
+      <div align="center" style="margin:20px" class="sign-in small-2 small-centered large-2 large-centered columns end">
+        <br />
+        <img class="avatar-icon" src="<%= student.photo_url %>"/>
+        <br />
+        <h2 align="center"><%= student.first_name %></h3>
+        <h3 align="center"><%= student.year_in_college %></h2>
+        <h4 align="center"><%= student.major %></h4>
+        <br />
+      </div>
+    </a>
+    <% end %>
   <% end %>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
   <br />
   <br />
   <br />

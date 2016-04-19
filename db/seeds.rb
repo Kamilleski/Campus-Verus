@@ -1,3 +1,5 @@
+# SCHOOL SEEDS
+
 School.create(
   name: "University of California, Berkeley",
   nickname: "Berkeley",
@@ -571,3 +573,145 @@ School.create(
 #   logo: "",
 #   mascot: "",
 #   date_founded: XX)
+
+# STUDENT SEEDS
+
+Student.create(
+  first_name: "T.J.",
+  last_name: "Detweiler",
+  photo_url: "https://pbs.twimg.com/profile_images/631984147720859648/-PMuM7qz.jpg",
+  interests: "Bubble Gum",
+  year_in_college: "Junior",
+  living_situation: "With Parents",
+  hometown: "Third Street Elementary School",
+  email: "tj@recess.edu",
+  password: "password",
+  major: "Undeclared",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "Ashley",
+  last_name: "Spinelli",
+  photo_url: "http://vignette2.wikia.nocookie.net/recess/images/5/5e/0456666.jpg/revision/latest?cb=20130308032050",
+  interests: "Punching losers",
+  year_in_college: "Senior",
+  living_situation: "Co-op all-female house",
+  hometown: "Third Street Elementary School",
+  email: "spinelli@recess.edu",
+  password: "password",
+  major: "Sociology",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "Vince",
+  last_name: "LaSalle",
+  photo_url: "http://vignette4.wikia.nocookie.net/recess/images/4/4b/Vlcsnap-2013-02-24-20h01m10s85.png/revision/latest?cb=20130225030747",
+  interests: "Basketball",
+  year_in_college: "Senior",
+  living_situation: "Dorms",
+  hometown: "Third Street Elementary School",
+  email: "vincent@recess.edu",
+  password: "password",
+  major: "Outdoor Recreation",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "Gretchen",
+  last_name: "Grundler",
+  photo_url: "http://vignette2.wikia.nocookie.net/recess/images/4/47/Vlcsnap-2012-08-12-18h31m40s103.png/revision/latest?cb=20120812234602",
+  interests: "Studying",
+  year_in_college: "Senior",
+  living_situation: "Dorms",
+  hometown: "Third Street Elementary School",
+  email: "gretchen@recess.edu",
+  password: "password",
+  major: "Classics, Business",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "Mikey",
+  last_name: "Blumberg",
+  photo_url: "http://vignette1.wikia.nocookie.net/disney/images/4/46/Smell_Fishsticks.jpg/revision/latest?cb=20121227194022",
+  interests: "Singing",
+  year_in_college: "Senior",
+  living_situation: "With Parents",
+  hometown: "Third Street Elementary School",
+  email: "michael@recess.edu",
+  password: "password",
+  major: "Vocal Performance",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "Gus",
+  last_name: "Griswald",
+  photo_url: "http://vignette1.wikia.nocookie.net/disney/images/0/00/Gus_Did_It.jpg/revision/latest?cb=20121120051241",
+  interests: "Naivete",
+  year_in_college: "Senior",
+  living_situation: "Substance-free Dorms",
+  hometown: "Third Street Elementary School",
+  email: "gus@recess.edu",
+  password: "password",
+  major: "Animal Husbandry",
+  school_id: 1
+)
+
+# Student.create(
+#   first_name: "",
+#   last_name: "",
+#   photo_url: "",
+#   interests: "",
+#   year_in_college: "",
+#   living_situation: "",
+#   hometown: "",
+#   email: "",
+#   password: "",
+#   major: "",
+#   school_id:
+# )
+
+# Student.create(
+#   first_name: "",
+#   last_name: "",
+#   photo_url: "",
+#   interests: "",
+#   year_in_college: "",
+#   living_situation: "",
+#   hometown: "",
+#   email: "",
+#   password: "",
+#   major: "",
+#   school_id:
+# )
+
+# Student.create(
+#   first_name: "",
+#   last_name: "",
+#   photo_url: "",
+#   interests: "",
+#   year_in_college: "",
+#   living_situation: "",
+#   hometown: "",
+#   email: "",
+#   password: "",
+#   major: "",
+#   school_id:
+# )
+
+# Student.create(
+#   first_name: "",
+#   last_name: "",
+#   photo_url: "",
+#   interests: "",
+#   year_in_college: "",
+#   living_situation: "",
+#   hometown: "",
+#   email: "",
+#   password: "",
+#   major: "",
+#   school_id:
+# )

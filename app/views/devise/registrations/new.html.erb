@@ -32,7 +32,7 @@
         <% if resource_name == :student %>
           <div class="field">
             <%= f.label "College or University" %>
-            <%= f.collection_select(:school_id, School.all, :id, :name) %>
+            <%= f.collection_select(:school_id, School.all.sort_by { |s| s.name }, :id, :name) %>
           </div>
 
           <div class="field">
@@ -48,6 +48,11 @@
           <div class="field">
             <%= f.label "Year in College" %><br />
             <%= f.select(:year_in_college, options_for_select(Student::COLLEGE_YEARS)) %>
+          </div>
+
+          <div class="field">
+            <%= f.label "Major" %><br />
+            <%= f.text_field :major, autofocus: true %>
           </div>
 
           <div class="field">
