@@ -1,14 +1,6 @@
 require 'rails_helper'
 
 feature 'user can register for an account as either a student or a tourist' do
-  let(:hermione) do
-    FactoryGirl.create(:tourist)
-  end
-
-  let(:freddie) do
-    FactoryGirl.create(:student)
-  end
-
   scenario 'user can navigate to student registration from home page' do
     visit root_path
 
@@ -55,7 +47,9 @@ feature 'user can register for an account as either a student or a tourist' do
     expect(page).to_not have_content("Hometown")
   end
 
-  scenario 'user can sign in as college student guide' do
+  scenario 'user can register as college student guide' do
+    freddie = FactoryGirl.build(:student)
+
     visit new_student_registration_path
 
     fill_in "student_first_name", with: freddie.first_name
@@ -72,11 +66,13 @@ feature 'user can register for an account as either a student or a tourist' do
 
     click_button "Sign up"
 
-    expect(page).to have_content("Welcome!")
+    expect(page).to have_content("You are already signed in")
     expect(page).to_not have_content("error")
   end
 
-  scenario 'user can sign in as tourist' do
+  scenario 'user can register as tourist' do
+    hermione = FactoryGirl.build(:tourist)
+
     visit new_tourist_registration_path
 
     fill_in "tourist_first_name", with: hermione.first_name
@@ -94,28 +90,44 @@ feature 'user can register for an account as either a student or a tourist' do
     expect(page).to_not have_content("error")
   end
 
-  # scenario 'student does not fill in registration form correctly' do
-  #   visit new_student_registration_path
-  #
-  #   fill_in "First name", with: freddie.first_name
-  #   fill_in "Last name", with: freddie.last_name
-  #   fill_in "Email", with: freddie.email
-  #   fill_in "College or university", with: freddie.school
-  #   fill_in "Link to photo", with: freddie.photo_url
-  #   fill_in "Interests", with: freddie.interests
-  #   fill_in "Living situation", with: freddie.living_situation
-  #   fill_in ""
-  # end
+  scenario 'student does not fill in registration form correctly' do
+    freddie = FactoryGirl.build(:student)
 
-  # scenario 'tourist does not fill in registration form correctly' do
-  #   visit new_tourist_registration_path
-  #
-  #   fill_in "First name", with: freddie.first_name
-  #   fill_in "Last name", with: freddie.last_name
-  #   fill_in "Email", with: freddie.email
-  #
+    visit new_student_registration_path
 
-  # expect(page).to have_content("errors prohibited this tourist from being saved:")
-  # expect(page).to_not have_content("Welcome")
-  # end
+    fill_in "student_first_name", with: freddie.first_name
+    fill_in "student_last_name", with: freddie.last_name
+    fill_in "student_email", with: freddie.email
+    select freddie.school.name, from: "student_school_id"
+    fill_in "student_interests", with: freddie.interests
+    select freddie.year_in_college, from: "student_year_in_college"
+    fill_in "student_living_situation", with: freddie.living_situation
+    fill_in "student_password", with: freddie.password
+    fill_in "student_password_confirmation", with: freddie.password
+
+    click_button "Sign up"
+
+    expect(page).to have_content("prohibited this student from being saved:")
+    expect(page).to_not have_content("prohibited this tourist from being saved:")
+    expect(page).to_not have_content("You are already signed in")
+  end
+
+  scenario 'tourist does not fill in registration form correctly' do
+    hermione = FactoryGirl.build(:tourist)
+
+    visit new_tourist_registration_path
+
+    fill_in "tourist_first_name", with: hermione.first_name
+    fill_in "tourist_email", with: hermione.email
+    select hermione.intended_start_date_semester, from: "tourist_intended_start_date_semester"
+    fill_in "tourist_intended_start_date_year", with: hermione.intended_start_date_year
+    fill_in "tourist_password", with: hermione.password
+    fill_in "tourist_password_confirmation", with: hermione.password
+
+    click_button "Sign up"
+
+    expect(page).to have_content("prohibited this tourist from being saved:")
+    expect(page).to_not have_content("prohibited this student from being saved:")
+    expect(page).to_not have_content("You are already signed in")
+  end
 end
