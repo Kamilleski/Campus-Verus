@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :school do
-    name "University of California Berkeley"
+    name "University of California, Berkeley"
     nickname "Berkeley"
     city "Berkeley"
     state "CA"

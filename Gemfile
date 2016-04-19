@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'foundation-rails'
 gem 'kaminari'
 gem 'parallax-rails'
+gem 'devise'
 
 
 group :development, :test do

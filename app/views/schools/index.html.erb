@@ -1,10 +1,15 @@
 <div class="standard-background">
-  <h1 style="width:90%; margin-left: 5%; margin-right: 5%">Schools available for tours:</h1>
-  <br />
-  <h3 style="width:90%; margin-left: 5%; margin-right: 5%">Select school to view details and available guides.</h3>
+  <br /><br /><br /><br />
+  <div class="sign-in small-9 large-centered columns">
+    <br />
+    <h1 align="center" style="width:90%; margin-left: 5%; margin-right: 5%">Schools available for tours:</h1>
+    <br />
+    <h3 align="center" style="width:90%; margin-left: 5%; margin-right: 5%">Select school to view details and available guides.</h3>
+    <br />
+  </div>
   <br />
   <div>
-    <table style="width:80%; margin: 10%">
+    <table style="width:76%; margin-left: 12%; margin-right: 12%">
       <tr>
         <th>Seal</th>
         <th>Name</th>
@@ -21,6 +26,6 @@
       <% end %>
     </table>
     <br />
-      <%= paginate @schools %>
+    <%= paginate @schools %>
   </div>
 </div>
