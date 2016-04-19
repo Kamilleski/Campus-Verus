@@ -24,6 +24,11 @@
 
       <% if resource_name == :student %>
         <div class="field">
+          <%= f.label :school %>
+          <%= f.select(:school, options_for_select(School.names.sort_by!{ |m| m.downcase })) %>
+        </div>
+
+        <div class="field">
           <%= f.label :photo_url %><br />
           <%= f.url_field :photo_url, autofocus: true %>
         </div>
@@ -56,7 +61,7 @@
 
         <div class="field">
           <%= f.label :intended_start_date_semester %><br />
-          <%= f.number_field :intended_start_date_semester, autofocus: true %>
+          <%= f.text_field :intended_start_date_semester, autofocus: true %>
         </div>
 
         <div class="field">
