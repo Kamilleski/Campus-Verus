@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :schools, only: [:index, :show]
 
-  #possibly nest students under schools?
+  # possibly nest students under schools?
   resources :students, only: [:index, :show, :new, :create]
 
   resources :homes, only: [:index]

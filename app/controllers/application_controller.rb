@@ -5,26 +5,26 @@ class ApplicationController < ActionController::Base
   before_filter :configure_permitted_parameters, if: :devise_controller?
   after_filter :store_action
 
-   def store_action
-     return unless request.get?
-     if (request.path != "/students/sign_in" &&
-         request.path != "/students/sign_up" &&
-         request.path != "/students/password/new" &&
-         request.path != "/students/password/edit" &&
-         request.path != "/students/confirmation" &&
-         request.path != "/students/sign_out" &&
-         !request.xhr?) # don't store ajax calls
-       store_location_for(:student, request.fullpath)
-      elsif (request.path != "/tourists/sign_in" &&
-         request.path != "/tourists/sign_up" &&
-         request.path != "/tourists/password/new" &&
-         request.path != "/tourists/password/edit" &&
-         request.path != "/tourists/confirmation" &&
-         request.path != "/tourists/sign_out" &&
-         !request.xhr?) # don't store ajax calls
-       store_location_for(:student, request.fullpath)
-     end
-   end
+  def store_action
+    return unless request.get?
+    if (request.path != "/students/sign_in" &&
+      request.path != "/students/sign_up" &&
+      request.path != "/students/password/new" &&
+      request.path != "/students/password/edit" &&
+      request.path != "/students/confirmation" &&
+      request.path != "/students/sign_out" &&
+      !request.xhr?) # don't store ajax calls
+      store_location_for(:student, request.fullpath)
+    elsif (request.path != "/tourists/sign_in" &&
+      request.path != "/tourists/sign_up" &&
+      request.path != "/tourists/password/new" &&
+      request.path != "/tourists/password/edit" &&
+      request.path != "/tourists/confirmation" &&
+      request.path != "/tourists/sign_out" &&
+      !request.xhr?) # don't store ajax calls
+      store_location_for(:student, request.fullpath)
+    end
+  end
 
   def after_sign_out_path_for(type)
     if type == :student
