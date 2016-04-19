@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   end
 
   resources :schools, only: [:index, :show]
-    resources :students, only: [:index, :show, :new, :create]
 
+  #possibly nest students under schools?
+  resources :students, only: [:index, :show, :new, :create]
 
   resources :homes, only: [:index]
 

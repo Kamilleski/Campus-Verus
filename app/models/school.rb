@@ -28,13 +28,4 @@ class School < ActiveRecord::Base
   def self.search(query)
     where("name ilike ?", "%#{query}%")
   end
-
-  def self.names
-    names_array = []
-    School.all.each do |school|
-      names_array << school.name
-    end
-  return names_array
-  end
-
 end

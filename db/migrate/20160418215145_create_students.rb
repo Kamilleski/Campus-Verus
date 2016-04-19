@@ -9,7 +9,7 @@ class CreateStudents < ActiveRecord::Migration
       t.string :interests, null: false
       t.string :year_in_college, null: false
       t.string :living_situation, null: false
-      t.string :hometown, null:false
+      t.string :hometown, null: false
 
       t.timestamps
     end
