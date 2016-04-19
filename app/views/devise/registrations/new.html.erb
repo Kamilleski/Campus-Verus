@@ -1,94 +1,97 @@
-<div class="row">
-  <div class="small-6 large-centered columns">
-    <br /><br />
-    <h2 align="center">Sign up as a <%= resource_name %>!</h2>
-    <br /><br />
+<div class="standard-background">
+  <br />
+  <div class="row">
+    <div class="sign-in small-6 large-centered columns">
+      <br />
+      <h2 align="center">Sign up as a <%= resource_name %>!</h2>
+      <br />
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
 
-      <div class="field">
-        <%= f.label :first_name %><br />
-        <%= f.text_field :first_name, autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :last_name %><br />
-        <%= f.text_field :last_name, autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
-      </div>
-
-      <% if resource_name == :student %>
         <div class="field">
-          <%= f.label :school %>
-          <%= f.select(:school, options_for_select(School.names.sort_by!{ |m| m.downcase })) %>
+          <%= f.label "First Name" %><br />
+          <%= f.text_field :first_name, autofocus: true %>
         </div>
 
         <div class="field">
-          <%= f.label :photo_url %><br />
-          <%= f.url_field :photo_url, autofocus: true %>
+          <%= f.label "Last Name" %><br />
+          <%= f.text_field :last_name, autofocus: true %>
         </div>
 
         <div class="field">
-          <%= f.label :interests %><br />
-          <%= f.text_area :interests, autofocus: true %>
+          <%= f.label "Email" %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <% if resource_name == :student %>
+          <div class="field">
+            <%= f.label "College or University" %>
+            <%= f.select(:school, options_for_select(School.names.sort_by!{ |m| m.downcase })) %>
+          </div>
+
+          <div class="field">
+            <%= f.label "Link to Photo" %><br />
+            <%= f.url_field :photo_url, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label "Interests" %><br />
+            <%= f.text_area :interests, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label "Year in College" %><br />
+            <%= f.select(:year_in_college, options_for_select(Student::COLLEGE_YEARS)) %>
+          </div>
+
+          <div class="field">
+            <%= f.label :living_situation %><br />
+            <%= f.text_field :living_situation, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label "Hometown" %><br />
+            <%= f.text_field :hometown, autofocus: true %>
+          </div>
+
+        <% elsif resource_name == :tourist %>
+          <div class="field">
+            <%= f.label "Prospective Major" %><br />
+            <%= f.text_field :prospective_major, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label "Semester of Intended Start Date" %><br />
+            <%= f.select(:intended_start_date_semester, options_for_select(Tourist::SEASONS)) %>
+          </div>
+
+          <div class="field">
+            <%= f.label "Year of Intended Start Date" %><br />
+            <%= f.number_field :intended_start_date_year, autofocus: true %>
+          </div>
+
+        <% end %>
+
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
         </div>
 
         <div class="field">
-          <%= f.label :year_in_college %><br />
-          <%= f.text_field :year_in_college, autofocus: true %>
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
         </div>
 
-        <div class="field">
-          <%= f.label :living_situation %><br />
-          <%= f.text_field :living_situation, autofocus: true %>
+        <div align="center" class="actions">
+          <%= f.submit "Sign up" %>
         </div>
-
-        <div class="field">
-          <%= f.label :hometown %><br />
-          <%= f.text_field :hometown, autofocus: true %>
-        </div>
-
-      <% elsif resource_name == :tourist %>
-        <div class="field">
-          <%= f.label :prospective_major %><br />
-          <%= f.text_field :prospective_major, autofocus: true %>
-        </div>
-
-        <div class="field">
-          <%= f.label :intended_start_date_semester %><br />
-          <%= f.text_field :intended_start_date_semester, autofocus: true %>
-        </div>
-
-        <div class="field">
-          <%= f.label :intended_start_date_year %><br />
-          <%= f.number_field :intended_start_date_year, autofocus: true %>
-        </div>
-
       <% end %>
-
-      <div class="field">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
-
-      <div class="actions">
-        <%= f.submit "Sign up" %>
-      </div>
-    <% end %>
+      <br />
+    </div>
   </div>
-</div>
-
 <%= render "devise/shared/links" %>
+</div>

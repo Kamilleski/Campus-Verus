@@ -15,47 +15,7 @@
   </head>
 
   <body>
-    <div id="page">
-      <!-- Medium-Up Navigation -->
-       <div data-sticky-container class="sticky-container" style="height: 55px;">
-        <nav class="top-bar sticky-wrapper" id="nav-menu">
-
-          <div class="logo-wrapper hide-for-small-only">
-            <div class="logo">
-              <a href="/"><img src="http://placehold.it/350x150?text=LOGO"></a>
-            </div>
-          </div>
-
-          <!-- Left Nav Section -->
-          <div class="top-bar-left">
-            <ul class="vertical medium-horizontal menu">
-              <li><%= link_to "Schools", schools_path %></li>
-              <li><%= link_to "About", root_path(anchor: "about") %></li>
-            </ul>
-          </div>
-
-          <!-- Right Nav Section -->
-          <div class="top-bar-right">
-            <ul class="vertical medium-horizontal menu">
-              <li><%= link_to "Your Account", schools_path %></li>
-              <li>
-                <%= form_tag(schools_path, :method => "get", id: "search-form", style: "background-color:white") do %>
-                <ul class="menu">
-                  <li>
-                    <%= text_field_tag :search, params[:search], placeholder: "Search Schools" %>
-                  </li>
-                  <li>
-                    <%= submit_tag "Search", :name => nil, class: "button" %>
-                  </li>
-                </ul>
-                <% end %>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
-
+    <br /><br />
       <% if notice %>
       <div class="not-transparent panel callout">
         <div class="callout success"><%= notice %></div>
@@ -67,5 +27,46 @@
       <% end %>
 
     <%= yield %>
+
+      <div class="header">
+        <div class="outer">
+          <!-- Medium-Up Navigation -->
+          <nav class="top-bar sticky-wrapper" id="nav-menu">
+
+            <div class="logo-wrapper hide-for-small-only">
+              <div class="logo">
+                <a href="/"><img src="http://placehold.it/350x150?text=LOGO"></a>
+              </div>
+            </div>
+
+            <!-- Left Nav Section -->
+            <div class="top-bar-left">
+              <ul class="vertical medium-horizontal menu">
+                <li><%= link_to "Schools", schools_path %></li>
+                <li><%= link_to "About", root_path(anchor: "about") %></li>
+              </ul>
+            </div>
+
+            <!-- Right Nav Section -->
+            <div class="top-bar-right">
+              <ul class="vertical medium-horizontal menu">
+                <li><%= link_to "Your Account", schools_path %></li>
+                <li>
+                  <%= form_tag(schools_path, :method => "get", id: "search-form", style: "background-color:white") do %>
+                  <ul class="menu">
+                    <li>
+                      <%= text_field_tag :search, params[:search], placeholder: "Search Schools" %>
+                    </li>
+                    <li>
+                      <%= submit_tag "Search", :name => nil, class: "button" %>
+                    </li>
+                  </ul>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          </nav>
+       </div>
+     </div>
   </body>
 </html>

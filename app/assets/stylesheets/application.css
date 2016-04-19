@@ -15,6 +15,28 @@
  *= require foundation_and_overrides
 
  */
+ .header {
+  background-color: #41D1D7;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: auto;
+ }
+
+ .outer {
+ background-color: #41D1D7;
+ position: relative;
+ height: auto;
+}
+
+.outer .header {
+ position: absolute;
+ bottom: 0;
+ z-index: 2;
+ top: auto;
+}
+
+
 
 .centered { vertical-align:middle; text-align:center; }
 .sticky { width: 100%; }
@@ -28,9 +50,14 @@ h1 {
   font-weight: 700;
 }
 
-h2, h3, h4, tr {
+h2, h3, h4, tr, .field {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
+}
+
+.field {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 tr, a {
@@ -52,7 +79,7 @@ img.avatar-icon {
 
 .parallax-slider {
     min-height: 800px;
-    background: rgb(202,202,202);
+    background: rgba(202,202,202);
 }
 
 html { height: 100%; }
@@ -61,24 +88,25 @@ html { height: 100%; }
     z-index:1
 }
 
-div.pagination {
-  float: center
-}
-
 nav.pagination span {
   float: left;
 }
 
 .pagination, .current {
+  float: center;
   display: inline;
   padding-right: 2px;
   padding-left: 2px;
   text-align: center;
-  width: 5%;
+  width: auto;
 }
 
-.first, .last, .next, .prev {
-  width: 7%
+.first, .prev, .last, .next {
+  width: 7%;
+}
+
+.sign-in {
+  background-color: rgba(202, 202, 202, 0.8);
 }
 
 .standard-background {
