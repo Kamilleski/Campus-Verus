@@ -38,6 +38,14 @@
   </table>
   <br />
   <br />
+  <% if !current_student || !current_tourist %>
+    <div class="sign-in small-9 large-centered columns">
+      <br />
+      <h3 align="center">High school student? <%= link_to "Log In", new_tourist_session_path %> or <%= link_to "Sign Up", new_tourist_registration_path %> to view available guides at <%= @school.nickname %></h3>
+      <h3 align="center">College student? <%= link_to "Log In", new_student_session_path %> or <%= link_to "Sign Up", new_student_registration_path %> to view available guides at <%= @school.nickname %></h3>
+      <br />
+    </div>
+  <% end %>
   <br />
   <br />
   <br />

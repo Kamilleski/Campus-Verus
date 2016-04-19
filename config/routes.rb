@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :schools, only: [:index, :show]
     resources :students, only: [:index, :show, :new, :create]
-    
+
   resources :homes, only: [:index]
+
+  resources :tourists, only: [:show]
 end

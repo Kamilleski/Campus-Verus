@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>Campus Verus</title>
+    <link rel="icon" href="http://www.veryicon.com/icon/png/Object/Nova/Column.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
 
@@ -50,7 +51,6 @@
             <!-- Right Nav Section -->
             <div class="top-bar-right">
               <ul class="vertical medium-horizontal menu">
-                <li><%= link_to "Your Account", schools_path %></li>
                 <li>
                   <%= form_tag(schools_path, :method => "get", id: "search-form", style: "background-color:white") do %>
                   <ul class="menu">
@@ -63,6 +63,16 @@
                   </ul>
                   <% end %>
                 </li>
+                <% if !current_student && !current_tourist %>
+                  <li><%= link_to "Take a Tour", new_tourist_registration_path %></li>
+                  <li><%= link_to "Become a Guide", new_student_registration_path %></li>
+                <% elsif current_student %>
+                  <li><%= link_to "Your Account", student_path(current_student) %></li>
+                  <li><%= link_to "Log Out", destroy_student_session_path %></li>
+                <% elsif current_tourist %>
+                  <li><%= link_to "Your Account", tourist_path(current_tourist) %></li>
+                  <li><%= link_to "Log Out", destroy_tourist_session_path %></li>
+                <% end %>
               </ul>
             </div>
           </nav>
