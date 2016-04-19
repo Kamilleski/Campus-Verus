@@ -1,0 +1,89 @@
+<div class="row">
+  <div class="small-6 large-centered columns">
+    <br /><br />
+    <h2 align="center">Sign up as a <%= resource_name %>!</h2>
+    <br /><br />
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="field">
+        <%= f.label :first_name %><br />
+        <%= f.text_field :first_name, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :last_name %><br />
+        <%= f.text_field :last_name, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <% if resource_name == :student %>
+        <div class="field">
+          <%= f.label :photo_url %><br />
+          <%= f.url_field :photo_url, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :interests %><br />
+          <%= f.text_area :interests, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :year_in_college %><br />
+          <%= f.text_field :year_in_college, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :living_situation %><br />
+          <%= f.text_field :living_situation, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :hometown %><br />
+          <%= f.text_field :hometown, autofocus: true %>
+        </div>
+
+      <% elsif resource_name == :tourist %>
+        <div class="field">
+          <%= f.label :prospective_major %><br />
+          <%= f.text_field :prospective_major, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :intended_start_date_semester %><br />
+          <%= f.number_field :intended_start_date_semester, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :intended_start_date_year %><br />
+          <%= f.number_field :intended_start_date_year, autofocus: true %>
+        </div>
+
+      <% end %>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "devise/shared/links" %>
