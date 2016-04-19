@@ -4,6 +4,11 @@
     <div class="sign-in small-6 large-centered columns">
       <br />
       <h2 align="center">Sign up as a <%= resource_name %>!</h2>
+      <% if resource_name == :student %>
+        <h3 align="center">Already registered? <%= link_to "Log in", new_student_session_path %></h3>
+      <% elsif resource_name == :tourist %>
+        <h3 align="center">Already registered? <%= link_to "Log in", new_tourist_session_path %></h3>
+      <% end %>
       <br />
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -27,7 +32,7 @@
         <% if resource_name == :student %>
           <div class="field">
             <%= f.label "College or University" %>
-            <%= f.select(:school, options_for_select(School.names.sort_by!{ |m| m.downcase })) %>
+            <%= f.collection_select(:school_id, School.all, :id, :name) %>
           </div>
 
           <div class="field">

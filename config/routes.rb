@@ -4,8 +4,17 @@ Rails.application.routes.draw do
 
   root "homes#index"
 
+  devise_scope :student do
+    get "students/sign_out" => "devise/sessions#destroy"
+  end
+
+  devise_scope :tourist do
+    get "tourists/sign_out" => "devise/sessions#destroy"
+  end
+
   resources :schools, only: [:index, :show]
     resources :students, only: [:index, :show, :new, :create]
+
 
   resources :homes, only: [:index]
 

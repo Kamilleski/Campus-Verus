@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     if resource_class == Student
-      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:first_name, :last_name, :email, :photo_url, :interests, :year_in_college, :living_situation, :hometown, :password, :password_confirmation).merge(school: School.find(params[:school_id]))}
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:first_name, :last_name, :email, :photo_url, :interests, :year_in_college, :living_situation, :hometown, :password, :password_confirmation, :school_id) }
       devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:first_name, :last_name, :email, :photo_url, :interests, :year_in_college, :living_situation, :hometown, :password, :password_confirmation, :current_password)}
     end
 
