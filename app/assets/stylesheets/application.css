@@ -48,7 +48,7 @@ h1 {
   font-weight: 700;
 }
 
-h2, h3, h4, tr, .field {
+h2, h3, h4, h5, tr, .field {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
 }

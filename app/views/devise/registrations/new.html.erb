@@ -1,5 +1,5 @@
 <div class="standard-background">
-  <br />
+  <br /><br />
   <div class="row">
     <div class="sign-in small-6 large-centered columns">
       <br />
@@ -15,17 +15,17 @@
         <%= devise_error_messages! %>
 
         <div class="field">
-          <%= f.label "First Name" %><br />
+          <%= f.label "First Name" %>
           <%= f.text_field :first_name, autofocus: true %>
         </div>
 
         <div class="field">
-          <%= f.label "Last Name" %><br />
+          <%= f.label "Last Name" %>
           <%= f.text_field :last_name, autofocus: true %>
         </div>
 
         <div class="field">
-          <%= f.label "Email" %><br />
+          <%= f.label "Email" %>
           <%= f.email_field :email, autofocus: true %>
         </div>
 
@@ -36,48 +36,48 @@
           </div>
 
           <div class="field">
-            <%= f.label "Link to Photo" %><br />
+            <%= f.label "Link to Photo" %>
             <%= f.url_field :photo_url, autofocus: true %>
           </div>
 
           <div class="field">
-            <%= f.label "Interests" %><br />
+            <%= f.label "Interests" %>
             <%= f.text_area :interests, autofocus: true %>
           </div>
 
           <div class="field">
-            <%= f.label "Year in College" %><br />
+            <%= f.label "Year in College" %>
             <%= f.select(:year_in_college, options_for_select(Student::COLLEGE_YEARS)) %>
           </div>
 
           <div class="field">
-            <%= f.label "Major" %><br />
+            <%= f.label "Major" %>
             <%= f.text_field :major, autofocus: true %>
           </div>
 
           <div class="field">
-            <%= f.label :living_situation %><br />
+            <%= f.label :living_situation %>
             <%= f.text_field :living_situation, autofocus: true %>
           </div>
 
           <div class="field">
-            <%= f.label "Hometown" %><br />
+            <%= f.label "Hometown" %>
             <%= f.text_field :hometown, autofocus: true %>
           </div>
 
         <% elsif resource_name == :tourist %>
           <div class="field">
-            <%= f.label "Prospective Major" %><br />
+            <%= f.label "Prospective Major" %>
             <%= f.text_field :prospective_major, autofocus: true %>
           </div>
 
           <div class="field">
-            <%= f.label "Semester of Intended Start Date" %><br />
+            <%= f.label "Semester of Intended Start Date" %>
             <%= f.select(:intended_start_date_semester, options_for_select(Tourist::SEASONS)) %>
           </div>
 
           <div class="field">
-            <%= f.label "Year of Intended Start Date" %><br />
+            <%= f.label "Year of Intended Start Date" %>
             <%= f.number_field :intended_start_date_year, autofocus: true %>
           </div>
 
@@ -92,7 +92,7 @@
         </div>
 
         <div class="field">
-          <%= f.label :password_confirmation %><br />
+          <%= f.label :password_confirmation %>
           <%= f.password_field :password_confirmation, autocomplete: "off" %>
         </div>
 
@@ -103,5 +103,11 @@
       <br />
     </div>
   </div>
-<%= render "devise/shared/links" %>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 </div>
