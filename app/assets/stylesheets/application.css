@@ -53,6 +53,12 @@ h2, h3, h4, h5, tr, .field {
   font-weight: 400;
 }
 
+h1.huge-title {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 150px;
+}
+
 .field {
   padding-left: 5px;
   padding-right: 5px;
