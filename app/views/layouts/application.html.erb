@@ -67,10 +67,10 @@
                   <li><%= link_to "Take a Tour", new_tourist_registration_path %></li>
                   <li><%= link_to "Become a Guide", new_student_registration_path %></li>
                 <% elsif current_student %>
-                  <li><%= link_to "Your Account", student_path(current_student) %></li>
+                  <li><%= link_to "Your Account", edit_student_registration_path %></li>
                   <li><%= link_to "Log Out", destroy_student_session_path %></li>
                 <% elsif current_tourist %>
-                  <li><%= link_to "Your Account", tourist_path(current_tourist) %></li>
+                  <li><%= link_to "Your Account", edit_tourist_registration_path %></li>
                   <li><%= link_to "Log Out", destroy_tourist_session_path %></li>
                 <% end %>
               </ul>

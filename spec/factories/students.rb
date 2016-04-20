@@ -8,6 +8,7 @@ FactoryGirl.define do
     year_in_college "Super Senior"
     living_situation "Mansion"
     hometown "Stone Town, Tanzania"
+    major "Music Performance"
     password "password"
 
     school

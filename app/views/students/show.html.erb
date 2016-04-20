@@ -1,0 +1,52 @@
+<% if !current_student && !current_tourist %>
+<br /><br />
+  <%= render 'unauthorized' %>
+<% else %>
+  <div class="standard-background">
+    <div align="center" class="sign-in small-7 large-centered columns">
+      <br /><br /><br />
+      <h2 align="center"><%= @student.first_name %> <%= @student.last_name %></h2>
+      <br />
+      <img class="avatar-icon" src="<%= @student.photo_url %>">
+      <br /><br /><br />
+      <table style="width:90%; margin-left:5%; margin-right:5%">
+        <tr>
+          <td><b>Major</b></td>
+          <td><%= @student.major %></td>
+        </tr>
+        <tr>
+          <td><b>Class Standing</b></td>
+          <td><%= @student.year_in_college %></td>
+        </tr>
+        <tr>
+          <td><b>Interests</b></td>
+          <td><%= @student.interests %></td>
+        </tr>
+        <tr>
+          <td><b>Living Situation</b></td>
+          <td><%= @student.living_situation %></td>
+        </tr>
+        <tr>
+          <td><b>Hometown</b></td>
+          <td><%= @student.hometown %></td>
+        </tr>
+      </table>
+      <br /><br />
+      <%= button_to "Contact #{@student.first_name}", root_path, class: "button" %>
+      <br /><br /><br />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+<% end %>
