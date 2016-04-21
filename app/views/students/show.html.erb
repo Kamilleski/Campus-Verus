@@ -30,6 +30,30 @@
           <td><b>Hometown</b></td>
           <td><%= @student.hometown %></td>
         </tr>
+        <% if @student.favorite_restaurant %>
+          <tr>
+            <td><b>Favorite Restaurant</b></td>
+            <td><%= @student.favorite_restaurant %></td>
+          </tr>
+        <% end %>
+        <% if @student.worst_campus_food %>
+          <tr>
+            <td><b>Worst Food on Campus</b></td>
+            <td><%= @student.worst_campus_food %></td>
+          </tr>
+        <% end %>
+        <% if @student.sketchiest_moment %>
+          <tr>
+            <td><b>Sketchiest moment at <%= @student.school.nickname %></b></td>
+            <td><%= @student.sketchiest_moment %></td>
+          </tr>
+        <% end %>
+        <% if @student.biggest_misconception %>
+          <tr>
+            <td><b>Biggest Misconception about My School</b></td>
+            <td><%= @student.biggest_misconception %></td>
+          </tr>
+        <% end %>
       </table>
       <br /><br />
       <%= button_to "Contact #{@student.first_name}", root_path, class: "button" %>
