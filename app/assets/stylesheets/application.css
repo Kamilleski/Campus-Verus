@@ -114,8 +114,11 @@ nav.pagination span {
 }
 
 .standard-background {
-  background: url("http://bit.ly/1WBsu0S") center;
-	background-size: cover;
+  background: url("http://bit.ly/1WBsu0S") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 /* Medium-Up Navigation */
 @media only screen and (min-width: 40rem) {
