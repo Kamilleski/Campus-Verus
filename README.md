@@ -17,4 +17,4 @@ Campus Verus is a college tour platform built with Ruby on Rails. Campus Verus w
 * Model testing with [Rspec](http://rspec.info/)
 * [Foundation](http://foundation.zurb.com/sites/docs/) as basis for styling
 * Additional styling with [Parallax.js](https://github.com/wagerfield/parallax)
-* API Calls to [New York Times](http://developers.nytimes.com/), [OpenWeatherMap](http://openweathermap.org/api), [Twitter](https://dev.twitter.com/rest/public) for each school
+* API Calls to [New York Times](http://developers.nytimes.com/), [Google Maps](https://developers.google.com/maps/) for each school
