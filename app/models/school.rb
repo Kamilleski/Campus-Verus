@@ -33,5 +33,4 @@ class School < ActiveRecord::Base
     @city = city
     @state = state
   end
-
 end
