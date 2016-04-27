@@ -43,33 +43,31 @@
   <% else %>
   <br />
   <div class="row">
-    <div align="center" style="margin:20px" class="sign-in small-3 large-3 columns">
+    <div align="center" style="margin:20px" class="sign-in small-7 large-7 columns">
       <br /><br />
-        <h3 align="center"><%= @school.nickname %> Weather</h3>
+        <h3 align="center"><%= @school.nickname %> Campus Map</h3>
+        <iframe width="600px" height="500px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDA_zZGj223xtkEW6TT6TZYAx3VzDON4Y&q=<%= @school.name %>+campus" allowfullscreen>
+        </iframe>
       <br /><br />
     </div>
-    <div align="center" style="margin:20px" class="sign-in small-3 large-3 columns">
+    <div align="center" style="margin:20px" class="sign-in small-2 large-4 columns">
       <br /><br />
         <h3 align="center"><%= @school.nickname %> News</h3>
-        <%= @school.get_news(ENV['NYT_ARTICLE_SEARCH_KEY'], @school.name) %>
-        <ul>
-          <% @top_news.each do |article| %>
-          <li>
-            <a href="<%= article['web_url'] %>"><%= article["headline"]["main"] %></a>
-          </li>
-          <% end %>
-        </ul>
-      <br /><br />
-    </div>
-    <div align="center" style="margin:20px" class="sign-in small-3 large-3 columns">
-      <br /><br />
-        <h3 align="center"><%= @school.nickname %> Crime</h3>
+        <p>
+          <ul>
+            <% @headlines.each do |article| %>
+              <li id="news-list">
+              <a id="news-list" href="<%= article['web_url'] %>"><%= "#{article["headline"]["main"]}" %></a>
+              </li>
+            <% end %>
+          </ul>
+        </p>
       <br /><br />
     </div>
   </div>
 
   <br />
-  <div class="row">
+  <div class="row" data-equalizer>
     <div class="sign-in small-8 large-centered columns">
       <br /><br />
         <h2 align="center"><b><%= @school.nickname %> Student Tour Guides</b></h2>
@@ -79,7 +77,7 @@
     <br /><br />
       <% @students.each do |student| %>
       <a href="/students/<%= student.id %>">
-        <div align="center" style="margin:20px" class="sign-in small-3 large-3 columns end">
+        <div align="center" style="margin:20px" class="sign-in small-3 large-3 columns" data-equalizer-watch>
           <br />
           <img class="avatar-icon" src="<%= student.photo_url %>"/>
           <br />
@@ -92,6 +90,6 @@
       <% end %>
     <% end %>
     <br />
-</div>
+  </div>
 
 </div>

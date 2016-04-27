@@ -113,6 +113,11 @@ nav.pagination span {
   background-color: rgba(202, 202, 202, 0.85);
 }
 
+#news-list {
+  font-size: 18px;
+  text-align: left;
+}
+
 .standard-background {
   background: url("http://bit.ly/1WBsu0S") no-repeat center center fixed;
   -webkit-background-size: cover;

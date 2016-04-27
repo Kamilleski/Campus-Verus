@@ -661,6 +661,118 @@ Student.create(
   school_id: 1
 )
 
+Student.create(
+  first_name: "Stan",
+  last_name: "Marsh",
+  photo_url: "http://mypartyshirt.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/t/stan-marsh_1_3.png",
+  interests: "",
+  year_in_college: "Sophomore",
+  living_situation: "Frat house",
+  hometown: "South Park, CO",
+  email: "stan@southpark.edu",
+  password: "password",
+  major: "Pre-Law",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "Kyle",
+  last_name: "Broflovski",
+  photo_url: "http://images2.fanpop.com/images/photos/6400000/kyle-is-cute-kyle-broflovski-6444563-400-300.gif",
+  interests: "Judaism",
+  year_in_college: "Sophomore",
+  living_situation: "Alpha Epsilon Pi",
+  hometown: "South Park, CO",
+  email: "kyle@southpark.edu",
+  password: "password",
+  major: "Religious Studies",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "Eric",
+  last_name: "Cartman",
+  photo_url: "http://cdn.pcwallart.com/images/south-park-cartman-angry-wallpaper-1.jpg",
+  interests: "Cheezy Poofs, Pot Pie",
+  year_in_college: "Freshman",
+  living_situation: "With Parents",
+  hometown: "South Park, CO",
+  email: "eric@southpark.edu",
+  password: "password",
+  major: "Undeclared",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "Kenny",
+  last_name: "McCormick",
+  photo_url: "http://orig05.deviantart.net/5358/f/2012/198/2/f/kenny_mccormick__playboy__by_1995roblox-d57k64f.jpg",
+  interests: "Life",
+  year_in_college: "Sophomore",
+  living_situation: "Trailer",
+  hometown: "South Park, CO",
+  email: "kenny@southpark.edu",
+  password: "password",
+  major: "Forensic Science",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "John",
+  last_name: "Lennon",
+  photo_url: "http://i2.mirror.co.uk/incoming/article5895610.ece/ALTERNATES/s615/John-Lennon-in-1970.jpg",
+  interests: "Music",
+  year_in_college: "Senior",
+  living_situation: "Flat",
+  hometown: "Liverpool, England",
+  email: "john@beatles.edu",
+  password: "password",
+  major: "Music Theory",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "Paul",
+  last_name: "McCartney",
+  photo_url: "https://31.media.tumblr.com/aa0ad32a8f429db72a21ca8f456db105/tumblr_inline_mtwo03fDco1r632ku.jpg",
+  interests: "Music",
+  year_in_college: "Senior",
+  living_situation: "Flat",
+  hometown: "Liverpool, England",
+  email: "paul@beatles.edu",
+  password: "password",
+  major: "Music Composition",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "George",
+  last_name: "Harrison",
+  photo_url: "https://static-secure.guim.co.uk/sys-images/Music/Pix/pictures/2009/6/30/1246353315622/George-Harrison-001.jpg",
+  interests: "Music",
+  year_in_college: "Senior",
+  living_situation: "Flat",
+  hometown: "Liverpool, England",
+  email: "george@beatles.edu",
+  password: "password",
+  major: "Music Composition",
+  school_id: 1
+)
+
+Student.create(
+  first_name: "Richard",
+  last_name: "Starkey",
+  photo_url: "https://streetsandstyle.files.wordpress.com/2014/07/169.jpg",
+  interests: "Music",
+  year_in_college: "Senior",
+  living_situation: "Flat",
+  hometown: "Liverpool, England",
+  email: "ringo@beatles.edu",
+  password: "password",
+  major: "Percussion Performance",
+  school_id: 1
+)
+
 # Student.create(
 #   first_name: "",
 #   last_name: "",
