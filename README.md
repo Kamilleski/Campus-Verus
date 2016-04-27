@@ -7,10 +7,8 @@ Campus Verus is a college tour platform built with Ruby on Rails. Campus Verus w
 
 ## Features
 * College and High School Students have separate portals and profiles
-* [tbd] High School Students may contact College Student Guides via [Twilio](https://www.twilio.com/api)
-* [tbd] High School Students may leave reviews about CSGs after tours
-* [tbd] College Student Guides may select a meeting point using Google Maps API
-* [tbd] CSGs may update their profiles with additional information (worst restaurant on campus, etc.)
+* CSGs may update their profiles with additional information (worst restaurant on campus, etc.)
+* Insider information is hidden from those without tourist accounts
 
 ## Technologies
 * Login/Registration functionality implemented with [Devise](https://github.com/plataformatec/devise/wiki)
@@ -19,3 +17,4 @@ Campus Verus is a college tour platform built with Ruby on Rails. Campus Verus w
 * Model testing with [Rspec](http://rspec.info/)
 * [Foundation](http://foundation.zurb.com/sites/docs/) as basis for styling
 * Additional styling with [Parallax.js](https://github.com/wagerfield/parallax)
+* API Calls to [New York Times](http://developers.nytimes.com/), [OpenWeatherMap](http://openweathermap.org/api), [Twitter](https://dev.twitter.com/rest/public) for each school
