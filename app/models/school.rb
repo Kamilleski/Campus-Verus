@@ -28,4 +28,24 @@ class School < ActiveRecord::Base
   def self.search(query)
     where("name ilike ?", "%#{query}%")
   end
+
+  def get_news(key, keyword)
+    @news_titles = []
+
+    url = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=#{keyword}&api-key=#{key}"
+    uri = URI(url)
+    response = Net::HTTP.get(uri)
+    parsed_crap = JSON.parse(response)
+    @top_news = parsed_crap["response"]["docs"]
+  end
+
+  def get_weather(key, city, state)
+    url= "https://api.forecast.io/forecast/#{key}/#{geolocation.data["latitude"]},#{geolocation.data["longitude"]}"
+    uri = URI(url)
+    response = Net::HTTP.get_response(uri)
+    parsed_data = JSON.parse(response.body)
+    @current_weather = parsed_data["currently"]["summary"]
+    @future_weather = parsed_data["minutely"]["summary"]
+    @temperature = parsed_data["currently"]["temperature"]
+  end
 end

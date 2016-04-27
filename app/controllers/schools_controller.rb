@@ -11,4 +11,5 @@ class SchoolsController < ApplicationController
     @school = School.find(params[:id])
     @students = @school.students.order(created_at: :desc).page params[:page]
   end
+  
 end

@@ -95,8 +95,9 @@ $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
   medium: 30px,
+  large: 20px,
 );
-$grid-column-align-edge: true;
+$grid-column-align-edge: false;
 $block-grid-max: 8;
 
 // 4. Base Typography
@@ -260,7 +261,11 @@ $buttongroup-expand-max: 6;
 // 13. Callout
 // -----------
 
+<<<<<<< HEAD
 $callout-background: #41D1D7;
+=======
+$callout-background: #41d1d7;
+>>>>>>> 88c32e1ad9c77fdcc71a38bef1ecbeb66a735a36
 $callout-background-fade: 85%;
 $callout-border: 1px solid rgba($black, 0.25);
 $callout-margin: 0 0 0 0;
