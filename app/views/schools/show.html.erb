@@ -37,54 +37,53 @@
     </tr>
   </table>
   <br />
-  <div class="sign-in small-8 large-centered columns">
-    <br /><br />
-      <h2 align="center"><b><%= @school.nickname %> Student Tour Guides</b></h2>
-    <br /><br />
-  </div>
-  <br /><br />
+
   <% if !current_student && !current_tourist %>
     <%= render 'students/unauthorized' %>
   <% else %>
-    <% @students.each do |student| %>
-    <a href="/students/<%= student.id %>">
-      <div align="center" style="margin:20px" class="sign-in small-2 small-centered large-2 large-centered columns end">
-        <br />
-        <img class="avatar-icon" src="<%= student.photo_url %>"/>
-        <br />
-        <h2 align="center"><%= student.first_name %></h3>
-        <h3 align="center"><%= student.year_in_college %></h2>
-        <h4 align="center"><%= student.major %></h4>
-        <br />
-      </div>
-    </a>
+  <br />
+  <div class="row">
+    <div align="center" style="margin:20px" class="sign-in small-3 large-3 columns">
+      <br /><br />
+        <h3 align="center"><%= @school.nickname %> Weather</h3>
+      <br /><br />
+    </div>
+    <div align="center" style="margin:20px" class="sign-in small-3 large-3 columns">
+      <br /><br />
+        <h3 align="center"><%= @school.nickname %> News</h3>
+      <br /><br />
+    </div>
+    <div align="center" style="margin:20px" class="sign-in small-3 large-3 columns">
+      <br /><br />
+        <h3 align="center"><%= @school.nickname %> Crime</h3>
+      <br /><br />
+    </div>
+  </div>
+
+  <br />
+  <div class="row">
+    <div class="sign-in small-8 large-centered columns">
+      <br /><br />
+        <h2 align="center"><b><%= @school.nickname %> Student Tour Guides</b></h2>
+      <br /><br />
+    </div>
+
+    <br /><br />
+      <% @students.each do |student| %>
+      <a href="/students/<%= student.id %>">
+        <div align="center" style="margin:20px" class="sign-in small-3 large-3 columns end">
+          <br />
+          <img class="avatar-icon" src="<%= student.photo_url %>"/>
+          <br />
+          <h2 align="center"><%= student.first_name %></h3>
+          <h3 align="center"><%= student.year_in_college %></h2>
+          <h4 align="center"><%= student.major %></h4>
+          <br />
+        </div>
+      </a>
+      <% end %>
     <% end %>
-  <% end %>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
+    <br />
+</div>
 
 </div>

@@ -53,6 +53,12 @@ h2, h3, h4, h5, tr, .field {
   font-weight: 400;
 }
 
+h1.huge-title {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 150px;
+}
+
 .field {
   padding-left: 5px;
   padding-right: 5px;
@@ -108,8 +114,11 @@ nav.pagination span {
 }
 
 .standard-background {
-  background: url("http://bit.ly/1WBsu0S") center;
-	background-size: cover;
+  background: url("http://bit.ly/1WBsu0S") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 /* Medium-Up Navigation */
 @media only screen and (min-width: 40rem) {

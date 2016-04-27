@@ -629,6 +629,7 @@ Student.create(
   email: "gretchen@recess.edu",
   password: "password",
   major: "Classics, Business",
+  biggest_misconception: "Everyone here is either pre-med, pre-law, or EECS. This is true if you don't look very hard, but if you want a small, personal learning environment you can find it here.",
   school_id: 1
 )
 

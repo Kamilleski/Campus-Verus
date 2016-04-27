@@ -28,4 +28,9 @@ class School < ActiveRecord::Base
   def self.search(query)
     where("name ilike ?", "%#{query}%")
   end
+
+  def get_weather(city, state)
+    @city = city
+    @state = state
+  end
 end
