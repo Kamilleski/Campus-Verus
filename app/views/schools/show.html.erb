@@ -46,6 +46,7 @@
     <div align="center" style="margin:20px" class="sign-in small-7 large-7 columns">
       <br /><br />
         <h3 align="center"><%= @school.nickname %> Campus Map</h3>
+        <br />
         <iframe width="600px" height="500px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDA_zZGj223xtkEW6TT6TZYAx3VzDON4Y&q=<%= @school.name %>+campus" allowfullscreen>
         </iframe>
       <br /><br /><br />
@@ -73,6 +74,9 @@
         <h2 align="center"><b><%= @school.nickname %> Student Tour Guides</b></h2>
       <br /><br />
     </div>
+
+
+
 
     <br /><br />
       <% @students.each do |student| %>
