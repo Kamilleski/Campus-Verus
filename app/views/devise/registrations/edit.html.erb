@@ -63,6 +63,26 @@
             <%= f.text_field :hometown, autofocus: true %>
           </div>
 
+          <div class="field">
+            <%= f.label "Favorite restaurant (optional)" %>
+            <%= f.text_field :favorite_restaurant, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label "Worst campus food (optional)" %>
+            <%= f.text_field :worst_campus_food, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label "Sketchiest moment on campus (optional)" %>
+            <%= f.text_area :sketchiest_moment, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label "Biggest misconception about your school (optional)" %>
+            <%= f.text_area :biggest_misconception, autofocus: true %>
+          </div>
+
         <% elsif resource_name == :tourist %>
           <div class="field">
             <%= f.label "Prospective Major" %>
