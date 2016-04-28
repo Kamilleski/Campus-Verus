@@ -47,29 +47,29 @@ feature 'user can register for an account as either a student or a tourist' do
     expect(page).to_not have_content("Hometown")
   end
 
-  # scenario 'user can register as college student guide' do
-  #   freddie = FactoryGirl.build(:student)
-  #
-  #   visit new_student_registration_path
-  #
-  #   fill_in "student_first_name", with: freddie.first_name
-  #   fill_in "student_last_name", with: freddie.last_name
-  #   fill_in "student_email", with: freddie.email
-  #   select freddie.school.name, from: "student_school_id"
-  #   fill_in "student_photo_url", with: freddie.photo_url
-  #   fill_in "student_interests", with: freddie.interests
-  #   select freddie.year_in_college, from: "student_year_in_college"
-  #   fill_in "student_living_situation", with: freddie.living_situation
-  #   fill_in "student_hometown", with: freddie.hometown
-  #   fill_in "student_major", with: freddie.major
-  #   fill_in "student_password", with: freddie.password
-  #   fill_in "student_password_confirmation", with: freddie.password
-  #
-  #   click_button "Sign up"
-  #
-  #   expect(page).to have_content("You are already signed in")
-  #   expect(page).to_not have_content("error")
-  # end
+  scenario 'user can register as college student guide' do
+    freddie = FactoryGirl.build(:student)
+
+    visit new_student_registration_path
+
+    fill_in "student_first_name", with: freddie.first_name
+    fill_in "student_last_name", with: freddie.last_name
+    fill_in "student_email", with: freddie.email
+    select freddie.school.name, from: "student_school_id"
+    fill_in "student_photo_url", with: freddie.photo_url
+    fill_in "student_interests", with: freddie.interests
+    select freddie.year_in_college, from: "student_year_in_college"
+    fill_in "student_living_situation", with: freddie.living_situation
+    fill_in "student_hometown", with: freddie.hometown
+    fill_in "student_major", with: freddie.major
+    fill_in "student_password", with: freddie.password
+    fill_in "student_password_confirmation", with: freddie.password
+
+    click_button "Sign up"
+
+    expect(page).to have_content("You are already signed in")
+    expect(page).to_not have_content("error")
+  end
 
   scenario 'user can register as tourist' do
     hermione = FactoryGirl.build(:tourist)
