@@ -9,7 +9,7 @@ class SchoolsController < ApplicationController
 
   def show
     @school = School.find(params[:id])
-    @students = @school.students.order(created_at: :desc).page params[:page]
+    @students = @school.students.order(:last_name).page(params[:page]).per(4)
 
     @headlines = @school.get_news('6b2e6c6994b500d2b242f155275b2806:6:74617899', @school.name)
   end
