@@ -20,3 +20,14 @@ Campus Verus is a college tour platform built with Ruby on Rails. Campus Verus w
 * [Foundation](http://foundation.zurb.com/sites/docs/) as basis for styling
 * Additional styling with [Parallax.js](https://github.com/wagerfield/parallax)
 * API Calls to [New York Times](http://developers.nytimes.com/), [Google Maps](https://developers.google.com/maps/) for each school
+
+## Site Navigation
+* New visitors can browse schools either by paginating through them or using the fully-functioning search feature
+* New visitors can see 'standard' information about every college, but only insider information once they create an account
+* College students can tweak their profile to be more attractive and interesting to prospies
+* Each college show page (once logged-in) attemps to show the realities of life at the school by dynamically showing: 
+  * Google Campus map (with ratings and associated data)
+  * Top New York Times stories related to that particular school
+  * Real, current student opintions about their college experience thus far
+* Logged-in tourists can navigate through school pages and select tour guides that meet their interests, then contact them and set up a time for a tour
+* **HINT** Check out UC Berkeley's school page for some awesome seeded data. ;)
